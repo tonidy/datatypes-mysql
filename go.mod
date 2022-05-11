@@ -1,4 +1,4 @@
-module github.com/tonidy/datatypes/mysql
+module github.com/tonidy/datatypes-mysql
 
 go 1.14
 

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	datatypes "github.com/tonidy/datatypes/mysql"
+	datatypes "github.com/tonidy/datatypes-mysql"
 	"gorm.io/gorm"
 	. "gorm.io/gorm/utils/tests"
 )
