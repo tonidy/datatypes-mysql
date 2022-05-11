@@ -2,7 +2,7 @@
 
 ## JSON
 
-MySQL only supported
+Support MySQL only
 
 ```go
 import datatypes "gorm.io/datatypes/mysql"
@@ -48,7 +48,7 @@ DB.First(&user, datatypes.JSONQuery("attributes").Equals("orgb", "orgs", "orgb")
 
 ## Date
 
-MySQL only supported.
+Support MySQL only
 
 ```go
 import datatypes "gorm.io/datatypes/mysql"
@@ -69,7 +69,7 @@ DB.First(&result, "name = ? AND date = ?", "jinzhu", datatypes.Date(curTime))
 
 ## Time
 
-MySQL only supported.
+Support MySQL only
 
 Time with nanoseconds is supported for some databases which support for time with fractional second scale.
 
