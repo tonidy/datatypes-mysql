@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"testing"
 
-	datatypes "gorm.io/datatypes/mysql"
+	datatypes "github.com/tonidy/datatypes/mysql"
 	. "gorm.io/gorm/utils/tests"
 )
 

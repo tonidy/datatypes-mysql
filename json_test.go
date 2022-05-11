@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	datatypes "gorm.io/datatypes/mysql"
+	datatypes "github.com/tonidy/datatypes/mysql"
 	"gorm.io/gorm"
 	. "gorm.io/gorm/utils/tests"
 )
@@ -13,7 +13,7 @@ import (
 var _ driver.Valuer = &datatypes.JSON{}
 
 func TestJSON(t *testing.T) {
-	if SupportedDriver("sqlite", "mysql", "postgres") {
+	if SupportedDriver("mysql") {
 		type UserWithJSON struct {
 			gorm.Model
 			Name       string
