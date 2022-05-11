@@ -2,10 +2,10 @@
 
 ## JSON
 
-sqlite, mysql, postgres supported
+MySQL only supported
 
 ```go
-import "gorm.io/datatypes"
+import datatypes "gorm.io/datatypes/mysql"
 
 type UserWithJSON struct {
 	gorm.Model
@@ -46,12 +46,12 @@ DB.First(&user, datatypes.JSONQuery("attributes").Equals("orgb", "orgs", "orgb")
 // SELECT * FROM "user" WHERE json_extract_path_text("attributes"::json,'orgs','orgb') = 'orgb'
 ```
 
-NOTE: SQlite need to build with `json1` tag, e.g: `go build --tags json1`, refer https://github.com/mattn/go-sqlite3#usage
-
 ## Date
 
+MySQL only supported.
+
 ```go
-import "gorm.io/datatypes"
+import datatypes "gorm.io/datatypes/mysql"
 
 type UserWithDate struct {
 	gorm.Model
@@ -69,12 +69,12 @@ DB.First(&result, "name = ? AND date = ?", "jinzhu", datatypes.Date(curTime))
 
 ## Time
 
-MySQL, PostgreSQL, SQLite, SQLServer are supported.
+MySQL only supported.
 
 Time with nanoseconds is supported for some databases which support for time with fractional second scale.
 
 ```go
-import "gorm.io/datatypes"
+import datatypes "gorm.io/datatypes/mysql"
 
 type UserWithTime struct {
     gorm.Model
@@ -90,5 +90,3 @@ DB.First(&result, "name = ? AND time = ?", "jinzhu", datatypes.NewTime(1, 2, 3, 
 // SELECT * FROM user_with_times WHERE name = "jinzhu" AND time = "01:02:03" ORDER BY `user_with_times`.`id` LIMIT 1
 ```
 
-NOTE: If the current using database is SQLite, the field column type is defined as `TEXT` type
-when GORM AutoMigrate because SQLite doesn't have time type.

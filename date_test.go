@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/jinzhu/now"
-	"gorm.io/datatypes"
+	datatypes "gorm.io/datatypes/mysql"
 	. "gorm.io/gorm/utils/tests"
 )
 
