@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	"gorm.io/datatypes"
+	datatypes "gorm.io/datatypes/mysql"
 	"gorm.io/gorm"
 	. "gorm.io/gorm/utils/tests"
 )

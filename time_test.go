@@ -3,7 +3,7 @@ package datatypes_test
 import (
 	"testing"
 
-	"gorm.io/datatypes"
+	datatypes "gorm.io/datatypes/mysql"
 	. "gorm.io/gorm/utils/tests"
 )
 
